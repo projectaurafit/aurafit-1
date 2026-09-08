@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Aura Fit — responsive QA harness</title>
+<style>
+  body{margin:0;background:#3a3a3a;font:12px system-ui;color:#eee;padding:10px}
+  .row{display:flex;gap:12px;align-items:flex-start}
+  .col{display:flex;flex-direction:column;gap:4px}
+  .lbl{font-weight:700;letter-spacing:.04em}
+  iframe{border:0;background:#fff;display:block;box-shadow:0 4px 18px rgba(0,0,0,.5)}
+</style>
+</head>
+<body>
+<div class="row" id="row"></div>
+<script>
+  // ?w=390,768&h=820&hash=/home&theme=dark
+  const q = new URLSearchParams(location.search);
+  const widths = (q.get('w') || '390').split(',').map(Number);
+  const h = Number(q.get('h') || 820);
+  const hash = q.get('hash') || '/home';
+  const theme = q.get('theme') || 'dark';
+  const row = document.getElementById('row');
+
+  widths.forEach(w => {
+    const col = document.createElement('div');
+    col.className = 'col';
+    const lbl = document.createElement('div');
+    lbl.className = 'lbl';
+    lbl.textContent = w + ' x ' + h + '  ·  ' + theme;
+    const f = document.createElement('iframe');
+    f.width = w; f.height = h;
+    f.src = 'index.html?qa=1#' + hash;
+    f.onload = () => {
+      try {
+        const win = f.contentWindow;
+        win.Store.load();
+        win.Store.setTheme(theme);
+        win.Store.demoLogin();
+        win.location.hash = '#' + hash;
+        win.Router.render();
+      } catch (e) { lbl.textContent += '  [' + e.message + ']'; }
+    };
+    col.appendChild(lbl); col.appendChild(f);
+    row.appendChild(col);
+  });
+</script>
+</body>
+</html>

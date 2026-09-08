@@ -1,0 +1,987 @@
+{
+  "flows": [
+    {
+      "entry": "admin.html",
+      "name": "admin sign-in, validation, password visibility, user rejection",
+      "pass": true
+    },
+    {
+      "entry": "admin.html",
+      "name": "create user, search, filters, details, role, suspension, password reset, owner protection",
+      "pass": true
+    },
+    {
+      "entry": "admin.html",
+      "name": "settings persistence, unsaved navigation, signup and maintenance gates, own password and mobile sign-out",
+      "pass": true
+    },
+    {
+      "entry": "admin.html",
+      "name": "SMTP validation, four presets, demo pass/fail and cancellation on edits",
+      "pass": true
+    },
+    {
+      "entry": "admin.html",
+      "name": "all four templates, variables, safe preview, save, reset and discard protection",
+      "pass": true
+    },
+    {
+      "entry": "admin.html",
+      "name": "JSON export includes updated accounts and settings",
+      "pass": true
+    },
+    {
+      "entry": "admin.html",
+      "name": "storage failure preserves the draft and rolls back saved settings",
+      "pass": true
+    },
+    {
+      "entry": "admin.html",
+      "name": "delete account and reset demo data with working default sign-in",
+      "pass": true
+    },
+    {
+      "entry": "admin-preview.html",
+      "name": "admin sign-in, validation, password visibility, user rejection",
+      "pass": true
+    },
+    {
+      "entry": "admin-preview.html",
+      "name": "create user, search, filters, details, role, suspension, password reset, owner protection",
+      "pass": true
+    },
+    {
+      "entry": "admin-preview.html",
+      "name": "settings persistence, unsaved navigation, signup and maintenance gates, own password and mobile sign-out",
+      "pass": true
+    },
+    {
+      "entry": "admin-preview.html",
+      "name": "SMTP validation, four presets, demo pass/fail and cancellation on edits",
+      "pass": true
+    },
+    {
+      "entry": "admin-preview.html",
+      "name": "all four templates, variables, safe preview, save, reset and discard protection",
+      "pass": true
+    },
+    {
+      "entry": "admin-preview.html",
+      "name": "JSON export includes updated accounts and settings",
+      "pass": true
+    },
+    {
+      "entry": "admin-preview.html",
+      "name": "storage failure preserves the draft and rolls back saved settings",
+      "pass": true
+    },
+    {
+      "entry": "admin-preview.html",
+      "name": "delete account and reset demo data with working default sign-in",
+      "pass": true
+    }
+  ],
+  "layouts": [
+    {
+      "entry": "admin.html",
+      "width": 320,
+      "theme": "light",
+      "route": "admin",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 320,
+      "theme": "light",
+      "route": "admin/users",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 320,
+      "theme": "light",
+      "route": "admin/smtp",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 320,
+      "theme": "light",
+      "route": "admin/emails",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 320,
+      "theme": "light",
+      "route": "admin/settings",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 320,
+      "theme": "dark",
+      "route": "admin",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 320,
+      "theme": "dark",
+      "route": "admin/users",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 320,
+      "theme": "dark",
+      "route": "admin/smtp",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 320,
+      "theme": "dark",
+      "route": "admin/emails",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 320,
+      "theme": "dark",
+      "route": "admin/settings",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 390,
+      "theme": "light",
+      "route": "admin",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 390,
+      "theme": "light",
+      "route": "admin/users",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 390,
+      "theme": "light",
+      "route": "admin/smtp",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 390,
+      "theme": "light",
+      "route": "admin/emails",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 390,
+      "theme": "light",
+      "route": "admin/settings",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 390,
+      "theme": "dark",
+      "route": "admin",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 390,
+      "theme": "dark",
+      "route": "admin/users",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 390,
+      "theme": "dark",
+      "route": "admin/smtp",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 390,
+      "theme": "dark",
+      "route": "admin/emails",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 390,
+      "theme": "dark",
+      "route": "admin/settings",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 768,
+      "theme": "light",
+      "route": "admin",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 768,
+      "theme": "light",
+      "route": "admin/users",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 768,
+      "theme": "light",
+      "route": "admin/smtp",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 768,
+      "theme": "light",
+      "route": "admin/emails",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 768,
+      "theme": "light",
+      "route": "admin/settings",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 768,
+      "theme": "dark",
+      "route": "admin",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 768,
+      "theme": "dark",
+      "route": "admin/users",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 768,
+      "theme": "dark",
+      "route": "admin/smtp",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 768,
+      "theme": "dark",
+      "route": "admin/emails",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 768,
+      "theme": "dark",
+      "route": "admin/settings",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 1024,
+      "theme": "light",
+      "route": "admin",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 1024,
+      "theme": "light",
+      "route": "admin/users",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 1024,
+      "theme": "light",
+      "route": "admin/smtp",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 1024,
+      "theme": "light",
+      "route": "admin/emails",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 1024,
+      "theme": "light",
+      "route": "admin/settings",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 1024,
+      "theme": "dark",
+      "route": "admin",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 1024,
+      "theme": "dark",
+      "route": "admin/users",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 1024,
+      "theme": "dark",
+      "route": "admin/smtp",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 1024,
+      "theme": "dark",
+      "route": "admin/emails",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 1024,
+      "theme": "dark",
+      "route": "admin/settings",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 1440,
+      "theme": "light",
+      "route": "admin",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 1440,
+      "theme": "light",
+      "route": "admin/users",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 1440,
+      "theme": "light",
+      "route": "admin/smtp",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 1440,
+      "theme": "light",
+      "route": "admin/emails",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 1440,
+      "theme": "light",
+      "route": "admin/settings",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 1440,
+      "theme": "dark",
+      "route": "admin",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 1440,
+      "theme": "dark",
+      "route": "admin/users",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 1440,
+      "theme": "dark",
+      "route": "admin/smtp",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 1440,
+      "theme": "dark",
+      "route": "admin/emails",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin.html",
+      "width": 1440,
+      "theme": "dark",
+      "route": "admin/settings",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 320,
+      "theme": "light",
+      "route": "admin",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 320,
+      "theme": "light",
+      "route": "admin/users",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 320,
+      "theme": "light",
+      "route": "admin/smtp",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 320,
+      "theme": "light",
+      "route": "admin/emails",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 320,
+      "theme": "light",
+      "route": "admin/settings",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 320,
+      "theme": "dark",
+      "route": "admin",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 320,
+      "theme": "dark",
+      "route": "admin/users",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 320,
+      "theme": "dark",
+      "route": "admin/smtp",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 320,
+      "theme": "dark",
+      "route": "admin/emails",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 320,
+      "theme": "dark",
+      "route": "admin/settings",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 390,
+      "theme": "light",
+      "route": "admin",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 390,
+      "theme": "light",
+      "route": "admin/users",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 390,
+      "theme": "light",
+      "route": "admin/smtp",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 390,
+      "theme": "light",
+      "route": "admin/emails",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 390,
+      "theme": "light",
+      "route": "admin/settings",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 390,
+      "theme": "dark",
+      "route": "admin",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 390,
+      "theme": "dark",
+      "route": "admin/users",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 390,
+      "theme": "dark",
+      "route": "admin/smtp",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 390,
+      "theme": "dark",
+      "route": "admin/emails",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 390,
+      "theme": "dark",
+      "route": "admin/settings",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 768,
+      "theme": "light",
+      "route": "admin",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 768,
+      "theme": "light",
+      "route": "admin/users",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 768,
+      "theme": "light",
+      "route": "admin/smtp",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 768,
+      "theme": "light",
+      "route": "admin/emails",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 768,
+      "theme": "light",
+      "route": "admin/settings",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 768,
+      "theme": "dark",
+      "route": "admin",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 768,
+      "theme": "dark",
+      "route": "admin/users",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 768,
+      "theme": "dark",
+      "route": "admin/smtp",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 768,
+      "theme": "dark",
+      "route": "admin/emails",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 768,
+      "theme": "dark",
+      "route": "admin/settings",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 1024,
+      "theme": "light",
+      "route": "admin",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 1024,
+      "theme": "light",
+      "route": "admin/users",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 1024,
+      "theme": "light",
+      "route": "admin/smtp",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 1024,
+      "theme": "light",
+      "route": "admin/emails",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 1024,
+      "theme": "light",
+      "route": "admin/settings",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 1024,
+      "theme": "dark",
+      "route": "admin",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 1024,
+      "theme": "dark",
+      "route": "admin/users",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 1024,
+      "theme": "dark",
+      "route": "admin/smtp",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 1024,
+      "theme": "dark",
+      "route": "admin/emails",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 1024,
+      "theme": "dark",
+      "route": "admin/settings",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 1440,
+      "theme": "light",
+      "route": "admin",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 1440,
+      "theme": "light",
+      "route": "admin/users",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 1440,
+      "theme": "light",
+      "route": "admin/smtp",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 1440,
+      "theme": "light",
+      "route": "admin/emails",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 1440,
+      "theme": "light",
+      "route": "admin/settings",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 1440,
+      "theme": "dark",
+      "route": "admin",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 1440,
+      "theme": "dark",
+      "route": "admin/users",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 1440,
+      "theme": "dark",
+      "route": "admin/smtp",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 1440,
+      "theme": "dark",
+      "route": "admin/emails",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    },
+    {
+      "entry": "admin-preview.html",
+      "width": 1440,
+      "theme": "dark",
+      "route": "admin/settings",
+      "overflow": false,
+      "blank": false,
+      "unnamed": 0
+    }
+  ],
+  "errors": []
+}

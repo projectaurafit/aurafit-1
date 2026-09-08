@@ -1,0 +1,154 @@
+/* ============================================================
+   AURA FIT - DESIGN TOKENS
+   Colours sampled directly from the Design/ reference kit.
+   Primitive -> semantic. Never hard-code a hex outside this file.
+   ============================================================ */
+
+:root{
+  /* ---- type ---- */
+  --font: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --fs-display: 26px;
+  --fs-title:   22px;
+  --fs-h2:      17px;
+  --fs-h3:      15px;
+  --fs-body:    14px;
+  --fs-sm:      13px;
+  --fs-xs:      12px;
+  --fs-xxs:     12px;
+
+  --lh-tight: 1.2;
+  --lh-snug:  1.35;
+  --lh-body:  1.55;
+
+  /* ---- spacing (4pt grid) ---- */
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:20px;
+  --s6:24px; --s7:32px; --s8:40px; --s9:56px;
+
+  /* ---- radius ---- */
+  --r-xs:8px; --r-sm:12px; --r-md:16px; --r-lg:20px; --r-xl:28px; --r-full:999px;
+
+  /* ---- motion ---- */
+  --ease-out:    cubic-bezier(.22,1,.36,1);
+  --ease-spring: cubic-bezier(.34,1.4,.5,1);
+  --t-fast:130ms; --t-base:240ms; --t-slow:420ms;
+
+  /* ---- layout ---- */
+  --tabbar-h: 68px;
+  --topbar-h: 60px;
+  --sidebar-w: 250px;
+  --content-max: 1160px;
+  --safe-b: env(safe-area-inset-bottom, 0px);
+
+  /* ---- constant surfaces (identical in both themes) ---- */
+  --hero-bg:     #15120F;   /* the always-dark wardrobe photo panel */
+  --hero-text:   #F6EFE8;
+  --hero-text-2: #C9BEB4;
+  --on-solid:    #FFFFFF;   /* text/icons on a saturated fill */
+  --plate-chip:    rgba(255,255,255,.88);  /* control resting on a product plate */
+  --plate-chip-fg: #6B6058;
+  --plate-chip-bd: rgba(24,18,14,.10);
+
+  /* ---- z-index ---- */
+  --z-nav:40; --z-fab:50; --z-sheet:80; --z-modal:90; --z-toast:95;
+}
+
+/* ============================ LIGHT ============================ */
+:root, html[data-theme="light"]{
+  --bg:            #FBF7F4;
+  --bg-grad:       radial-gradient(1100px 500px at 80% -10%, #FBEFE7 0%, rgba(251,247,244,0) 60%);
+  --surface:       #FFFFFF;
+  --surface-2:     #F7F3EF;
+  --surface-3:     #F1EBE5;
+  --surface-tint:  #F7EAE2;
+  --surface-tint-2:#FBF1EA;
+
+  --border:        #EDE4DC;
+  --border-2:      #E0D5CB;
+  --divider:       #F0E9E3;
+
+  --text:          #1C1917;
+  --text-2:        #695F58;
+  --text-3:        #74685F;
+
+  --accent:        #E4A87F;
+  --accent-2:      #C9865A;
+  --accent-text:   #9A5A32;
+  --accent-soft:   #F8EBE1;
+  --accent-ring:   rgba(228,168,127,.38);
+  --focus:         #9A5A32;
+  --on-accent:     #2C2019;
+
+  /* strong action = near-black in light (per reference kit) */
+  --primary:       #1C1917;
+  --on-primary:    #FFF9F5;
+
+  --danger:        #B13F35;
+  --danger-soft:   #FBECEA;
+  --success:       #36734D;
+  --success-soft:  #EAF3ED;
+
+  --scrim:         rgba(38,30,25,.44);
+
+  --knob:          #FFFFFF;
+  --plate:         #F4EFEA;
+  --plate-2:       #E9E1D9;
+
+  --sh-card:   0 1px 2px rgba(60,44,34,.05);
+  --sh-raised: 0 6px 20px rgba(60,44,34,.08);
+  --sh-sheet:  0 -14px 44px rgba(50,36,28,.16);
+  --sh-fab:    0 8px 22px rgba(190,132,88,.34);
+  --sh-pop:    0 12px 32px rgba(50,36,28,.14);
+
+  color-scheme: light;
+}
+
+/* ============================ DARK ============================= */
+html[data-theme="dark"]{
+  --bg:            #111312;
+  --bg-grad:       radial-gradient(1100px 500px at 80% -10%, #221D19 0%, rgba(17,19,18,0) 60%);
+  --surface:       #1B1C1E;
+  --surface-2:     #212322;
+  --surface-3:     #272928;
+  --surface-tint:  #37302A;
+  --surface-tint-2:#2B2622;
+
+  --border:        #2A2C2B;
+  --border-2:      #383A39;
+  --divider:       #242625;
+
+  --text:          #F3F1EF;
+  --text-2:        #9C9895;
+  --text-3:        #A39B95;
+
+  --accent:        #ECB99E;
+  --accent-2:      #ECB99E;
+  --accent-text:   #ECB99E;
+  --accent-soft:   #37302A;
+  --accent-ring:   rgba(236,185,158,.34);
+  --focus:         #ECB99E;
+  --on-accent:     #1F1814;
+
+  /* strong action = peach in dark (per reference kit) */
+  --primary:       #ECB99E;
+  --on-primary:    #1F1814;
+
+  --danger:        #E8837A;
+  --danger-soft:   #3A2523;
+  --success:       #7FBE9B;
+  --success-soft:  #1E2E26;
+
+  --scrim:         rgba(0,0,0,.62);
+
+  --knob:          #FFFFFF;
+  --plate:         #EFE9E3;
+  --plate-2:       #DFD7CF;
+
+  --sh-card:   0 1px 2px rgba(0,0,0,.3);
+  --sh-raised: 0 6px 20px rgba(0,0,0,.4);
+  --sh-sheet:  0 -14px 44px rgba(0,0,0,.55);
+  --sh-fab:    0 8px 22px rgba(0,0,0,.5);
+  --sh-pop:    0 12px 32px rgba(0,0,0,.5);
+
+  color-scheme: dark;
+}

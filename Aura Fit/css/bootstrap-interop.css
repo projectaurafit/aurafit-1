@@ -1,0 +1,200 @@
+/* ==========================================================
+   AURA FIT x BOOTSTRAP 5.3 — INTEROP LAYER
+   ----------------------------------------------------------
+   Architecture: Bootstrap supplies the normalize/Reboot base,
+   the grid (.container/.row/.col-*), the utility classes and
+   the JS plugins. Aura Fit's design system is the theme layer
+   that sits on top and owns the component look.
+
+   Seven class names exist in both libraries. Our flex helpers
+   .row/.col were renamed to .af-row/.af-col so Bootstrap's
+   grid stays fully usable; the remaining five are component
+   names that we deliberately re-skin, the same way any
+   Bootstrap theme does.
+
+   This file MUST load last. Bootstrap's own rules are more
+   specific in a few places, so some overrides are written at
+   matching specificity on purpose.
+   ========================================================== */
+
+/* ----------------------------------------------------------
+   1. REBOOT — we manage our own vertical rhythm
+   Bootstrap adds margin-bottom to headings, p, ul, ol, etc.
+   The app was built on a zero-margin baseline.
+   ---------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, dl, dd, figure, blockquote, pre, hr, fieldset {
+  margin: 0;
+}
+ul, ol { padding-left: 0; }
+
+/* Bootstrap sets fluid display sizes on h1-h6; every heading in
+   the app is sized by its own class, so inherit by default. */
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 700;
+  line-height: var(--lh-tight);
+  letter-spacing: -.02em;
+}
+
+/* Reboot recolours body text and links from Bootstrap's palette */
+body { color: var(--text); background-color: var(--bg); }
+a { color: inherit; text-decoration: none; }
+a:hover { color: inherit; }
+
+/* Reboot forces a light form palette */
+.input, .select, .textarea, input, select, textarea {
+  background-color: var(--surface);
+  color: var(--text);
+}
+.a-field input, .searchbar input { background-color: transparent; }
+
+/* ----------------------------------------------------------
+   2. .btn — Bootstrap's button base leaks line-height and colour
+   ---------------------------------------------------------- */
+.btn {
+  line-height: 1.35;
+  vertical-align: middle;
+  text-decoration: none;
+  --bs-btn-padding-x: 0;
+  --bs-btn-padding-y: 0;
+}
+.btn:focus, .btn:active, .btn:focus-visible { box-shadow: none; }
+.btn:active { top: auto; }
+
+/* Keep Bootstrap's hover/active/focus colours inside the Aura palette.
+   Without these mappings Bootstrap turns primary-button labels dark
+   on their dark fill and makes keyboard-focused buttons transparent. */
+.btn{--af-btn-bg:transparent;--af-btn-fg:var(--text);--af-btn-border:transparent}
+.btn--primary{--af-btn-bg:var(--primary);--af-btn-fg:var(--on-primary)}
+.btn--accent{--af-btn-bg:var(--accent);--af-btn-fg:var(--on-accent)}
+.btn--soft{--af-btn-bg:var(--surface-tint)}
+.btn--ghost,.sheet__save{--af-btn-bg:var(--surface);--af-btn-border:var(--border)}
+.btn--quiet{--af-btn-fg:var(--text-2)}
+.btn--danger{--af-btn-bg:var(--danger-soft);--af-btn-fg:var(--danger)}
+.sheet__save.is-saved{--af-btn-bg:var(--accent-soft);--af-btn-fg:var(--accent-text);--af-btn-border:var(--accent)}
+.btn{
+  --bs-btn-hover-color:var(--af-btn-fg);
+  --bs-btn-active-color:var(--af-btn-fg);
+  --bs-btn-hover-bg:var(--af-btn-bg);
+  --bs-btn-active-bg:var(--af-btn-bg);
+  --bs-btn-hover-border-color:var(--af-btn-border);
+  --bs-btn-active-border-color:var(--af-btn-border);
+  --bs-btn-disabled-color:var(--af-btn-fg);
+  --bs-btn-disabled-bg:var(--af-btn-bg);
+  --bs-btn-disabled-border-color:var(--af-btn-border);
+}
+.btn:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+
+/* ----------------------------------------------------------
+   3. .card — Bootstrap makes it a flex column; ours is a block
+   ---------------------------------------------------------- */
+.card {
+  display: block;
+  position: relative;
+  min-width: 0;
+  height: auto;
+  word-wrap: normal;
+  background-clip: border-box;
+}
+/* compositional cards keep their own display mode */
+.card.ootd { display: grid; }
+
+/* ----------------------------------------------------------
+   4. .badge — harmless overlap, just align it to our type
+   ---------------------------------------------------------- */
+.badge {
+  vertical-align: middle;
+  line-height: 1;
+  text-align: left;
+}
+
+/* ----------------------------------------------------------
+   5. .modal — Bootstrap hides it and pins it full-screen.
+   Ours is the dialog surface INSIDE .modal-scrim, so raise the
+   specificity to win cleanly.
+   ---------------------------------------------------------- */
+.modal-scrim .modal {
+  position: relative;
+  display: block;
+  top: auto;
+  left: auto;
+  z-index: auto;
+  width: 100%;
+  height: auto;
+  max-height:calc(100dvh - 40px);
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  outline: 0;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--sh-pop);
+}
+
+/* ----------------------------------------------------------
+   6. .toast — Bootstrap's `.toast:not(.show){display:none}` is
+   (0,2,0) and would hide every toast we raise. Match it.
+   ---------------------------------------------------------- */
+.toast-layer .toast {
+  display: flex;
+  width: auto;
+  max-width: 420px;
+  opacity: 1;
+  pointer-events: none;
+  background-clip: border-box;
+  background-color: var(--text);
+  color: var(--bg);
+  border: 0;
+  box-shadow: var(--sh-pop);
+  border-radius: var(--r-full);
+}
+.toast-layer .toast.is-out { opacity: 0; }
+
+/* ----------------------------------------------------------
+   7. Bootstrap component surfaces, themed to Aura Fit tokens
+   so anything built with plain Bootstrap markup still matches.
+   ---------------------------------------------------------- */
+.table {
+  --bs-table-color: var(--text);
+  --bs-table-bg: transparent;
+  --bs-table-border-color: var(--border);
+  --bs-table-striped-color: var(--text);
+  --bs-table-striped-bg: var(--surface-2);
+  --bs-table-hover-color: var(--text);
+  --bs-table-hover-bg: var(--surface-2);
+}
+.form-control, .form-select {
+  background-color: var(--surface);
+  border-color: var(--border);
+  color: var(--text);
+  border-radius: var(--r-sm);
+}
+.form-control:focus, .form-select:focus {
+  background-color: var(--surface);
+  border-color: var(--accent);
+  color: var(--text);
+  box-shadow: 0 0 0 3px var(--accent-ring);
+}
+.form-control::placeholder { color: var(--text-3); }
+.dropdown-menu, .list-group-item, .offcanvas, .popover {
+  background-color: var(--surface);
+  color: var(--text);
+  border-color: var(--border);
+}
+.text-muted { color: var(--text-2) !important; }
+.border { border-color: var(--border) !important; }
+
+/* Bootstrap's focus ring in our accent */
+:root {
+  --bs-focus-ring-color: var(--accent-ring);
+  --bs-link-color: var(--accent-text);
+  --bs-link-hover-color: var(--accent-2);
+  --bs-border-color: var(--border);
+  --bs-body-color: var(--text);
+  --bs-body-bg: var(--bg);
+  --bs-emphasis-color: var(--text);
+  --bs-secondary-color: var(--text-2);
+  --bs-tertiary-color: var(--text-3);
+  --bs-primary: var(--accent);
+}

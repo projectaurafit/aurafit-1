@@ -1,0 +1,1154 @@
+{
+  "routes": [
+    {
+      "route": "home",
+      "theme": "light",
+      "width": 320,
+      "docWidth": 320,
+      "scrollHeight": 1554,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "wardrobe",
+      "theme": "light",
+      "width": 320,
+      "docWidth": 320,
+      "scrollHeight": 844,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "wardrobe?mode=outfits",
+      "theme": "light",
+      "width": 320,
+      "docWidth": 320,
+      "scrollHeight": 1247,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "item/w001",
+      "theme": "light",
+      "width": 320,
+      "docWidth": 320,
+      "scrollHeight": 1493,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "outfit/o1",
+      "theme": "light",
+      "width": 320,
+      "docWidth": 320,
+      "scrollHeight": 1568,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "add",
+      "theme": "light",
+      "width": 320,
+      "docWidth": 320,
+      "scrollHeight": 1793,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "add?mode=outfit",
+      "theme": "light",
+      "width": 320,
+      "docWidth": 320,
+      "scrollHeight": 2790,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "ideas",
+      "theme": "light",
+      "width": 320,
+      "docWidth": 320,
+      "scrollHeight": 1834,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "account",
+      "theme": "light",
+      "width": 320,
+      "docWidth": 320,
+      "scrollHeight": 1848,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "stats",
+      "theme": "light",
+      "width": 320,
+      "docWidth": 320,
+      "scrollHeight": 1380,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "onboarding",
+      "theme": "light",
+      "width": 320,
+      "docWidth": 320,
+      "scrollHeight": 920,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "home",
+      "theme": "dark",
+      "width": 320,
+      "docWidth": 320,
+      "scrollHeight": 1554,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "wardrobe",
+      "theme": "dark",
+      "width": 320,
+      "docWidth": 320,
+      "scrollHeight": 844,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "wardrobe?mode=outfits",
+      "theme": "dark",
+      "width": 320,
+      "docWidth": 320,
+      "scrollHeight": 1247,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "item/w001",
+      "theme": "dark",
+      "width": 320,
+      "docWidth": 320,
+      "scrollHeight": 1493,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "outfit/o1",
+      "theme": "dark",
+      "width": 320,
+      "docWidth": 320,
+      "scrollHeight": 1568,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "add",
+      "theme": "dark",
+      "width": 320,
+      "docWidth": 320,
+      "scrollHeight": 1793,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "add?mode=outfit",
+      "theme": "dark",
+      "width": 320,
+      "docWidth": 320,
+      "scrollHeight": 2790,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "ideas",
+      "theme": "dark",
+      "width": 320,
+      "docWidth": 320,
+      "scrollHeight": 1834,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "account",
+      "theme": "dark",
+      "width": 320,
+      "docWidth": 320,
+      "scrollHeight": 1848,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "stats",
+      "theme": "dark",
+      "width": 320,
+      "docWidth": 320,
+      "scrollHeight": 1380,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "onboarding",
+      "theme": "dark",
+      "width": 320,
+      "docWidth": 320,
+      "scrollHeight": 920,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "home",
+      "theme": "light",
+      "width": 390,
+      "docWidth": 390,
+      "scrollHeight": 1505,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "wardrobe",
+      "theme": "light",
+      "width": 390,
+      "docWidth": 390,
+      "scrollHeight": 902,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "wardrobe?mode=outfits",
+      "theme": "light",
+      "width": 390,
+      "docWidth": 390,
+      "scrollHeight": 1434,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "item/w001",
+      "theme": "light",
+      "width": 390,
+      "docWidth": 390,
+      "scrollHeight": 1563,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "outfit/o1",
+      "theme": "light",
+      "width": 390,
+      "docWidth": 390,
+      "scrollHeight": 1688,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "add",
+      "theme": "light",
+      "width": 390,
+      "docWidth": 390,
+      "scrollHeight": 1737,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "add?mode=outfit",
+      "theme": "light",
+      "width": 390,
+      "docWidth": 390,
+      "scrollHeight": 3105,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "ideas",
+      "theme": "light",
+      "width": 390,
+      "docWidth": 390,
+      "scrollHeight": 1968,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "account",
+      "theme": "light",
+      "width": 390,
+      "docWidth": 390,
+      "scrollHeight": 1779,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "stats",
+      "theme": "light",
+      "width": 390,
+      "docWidth": 390,
+      "scrollHeight": 1329,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "onboarding",
+      "theme": "light",
+      "width": 390,
+      "docWidth": 390,
+      "scrollHeight": 903,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "home",
+      "theme": "dark",
+      "width": 390,
+      "docWidth": 390,
+      "scrollHeight": 1505,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "wardrobe",
+      "theme": "dark",
+      "width": 390,
+      "docWidth": 390,
+      "scrollHeight": 902,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "wardrobe?mode=outfits",
+      "theme": "dark",
+      "width": 390,
+      "docWidth": 390,
+      "scrollHeight": 1434,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "item/w001",
+      "theme": "dark",
+      "width": 390,
+      "docWidth": 390,
+      "scrollHeight": 1563,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "outfit/o1",
+      "theme": "dark",
+      "width": 390,
+      "docWidth": 390,
+      "scrollHeight": 1688,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "add",
+      "theme": "dark",
+      "width": 390,
+      "docWidth": 390,
+      "scrollHeight": 1737,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "add?mode=outfit",
+      "theme": "dark",
+      "width": 390,
+      "docWidth": 390,
+      "scrollHeight": 3105,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "ideas",
+      "theme": "dark",
+      "width": 390,
+      "docWidth": 390,
+      "scrollHeight": 1968,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "account",
+      "theme": "dark",
+      "width": 390,
+      "docWidth": 390,
+      "scrollHeight": 1779,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "stats",
+      "theme": "dark",
+      "width": 390,
+      "docWidth": 390,
+      "scrollHeight": 1329,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "onboarding",
+      "theme": "dark",
+      "width": 390,
+      "docWidth": 390,
+      "scrollHeight": 903,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "home",
+      "theme": "light",
+      "width": 768,
+      "docWidth": 768,
+      "scrollHeight": 1532,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "wardrobe",
+      "theme": "light",
+      "width": 768,
+      "docWidth": 768,
+      "scrollHeight": 1272,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "wardrobe?mode=outfits",
+      "theme": "light",
+      "width": 768,
+      "docWidth": 768,
+      "scrollHeight": 1387,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "item/w001",
+      "theme": "light",
+      "width": 768,
+      "docWidth": 768,
+      "scrollHeight": 1569,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "outfit/o1",
+      "theme": "light",
+      "width": 768,
+      "docWidth": 768,
+      "scrollHeight": 1858,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "add",
+      "theme": "light",
+      "width": 768,
+      "docWidth": 768,
+      "scrollHeight": 1614,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "add?mode=outfit",
+      "theme": "light",
+      "width": 768,
+      "docWidth": 768,
+      "scrollHeight": 2769,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "ideas",
+      "theme": "light",
+      "width": 768,
+      "docWidth": 768,
+      "scrollHeight": 1818,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "account",
+      "theme": "light",
+      "width": 768,
+      "docWidth": 768,
+      "scrollHeight": 1776,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "stats",
+      "theme": "light",
+      "width": 768,
+      "docWidth": 768,
+      "scrollHeight": 1337,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "onboarding",
+      "theme": "light",
+      "width": 768,
+      "docWidth": 768,
+      "scrollHeight": 900,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "home",
+      "theme": "dark",
+      "width": 768,
+      "docWidth": 768,
+      "scrollHeight": 1532,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "wardrobe",
+      "theme": "dark",
+      "width": 768,
+      "docWidth": 768,
+      "scrollHeight": 1272,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "wardrobe?mode=outfits",
+      "theme": "dark",
+      "width": 768,
+      "docWidth": 768,
+      "scrollHeight": 1387,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "item/w001",
+      "theme": "dark",
+      "width": 768,
+      "docWidth": 768,
+      "scrollHeight": 1569,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "outfit/o1",
+      "theme": "dark",
+      "width": 768,
+      "docWidth": 768,
+      "scrollHeight": 1858,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "add",
+      "theme": "dark",
+      "width": 768,
+      "docWidth": 768,
+      "scrollHeight": 1614,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "add?mode=outfit",
+      "theme": "dark",
+      "width": 768,
+      "docWidth": 768,
+      "scrollHeight": 2769,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "ideas",
+      "theme": "dark",
+      "width": 768,
+      "docWidth": 768,
+      "scrollHeight": 1818,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "account",
+      "theme": "dark",
+      "width": 768,
+      "docWidth": 768,
+      "scrollHeight": 1776,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "stats",
+      "theme": "dark",
+      "width": 768,
+      "docWidth": 768,
+      "scrollHeight": 1337,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "onboarding",
+      "theme": "dark",
+      "width": 768,
+      "docWidth": 768,
+      "scrollHeight": 900,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "home",
+      "theme": "light",
+      "width": 1440,
+      "docWidth": 1440,
+      "scrollHeight": 1599,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "wardrobe",
+      "theme": "light",
+      "width": 1440,
+      "docWidth": 1440,
+      "scrollHeight": 900,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "wardrobe?mode=outfits",
+      "theme": "light",
+      "width": 1440,
+      "docWidth": 1440,
+      "scrollHeight": 911,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "item/w001",
+      "theme": "light",
+      "width": 1440,
+      "docWidth": 1440,
+      "scrollHeight": 1095,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "outfit/o1",
+      "theme": "light",
+      "width": 1440,
+      "docWidth": 1440,
+      "scrollHeight": 1063,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "add",
+      "theme": "light",
+      "width": 1440,
+      "docWidth": 1440,
+      "scrollHeight": 1350,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "add?mode=outfit",
+      "theme": "light",
+      "width": 1440,
+      "docWidth": 1440,
+      "scrollHeight": 2048,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "ideas",
+      "theme": "light",
+      "width": 1440,
+      "docWidth": 1440,
+      "scrollHeight": 1290,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "account",
+      "theme": "light",
+      "width": 1440,
+      "docWidth": 1440,
+      "scrollHeight": 1742,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "stats",
+      "theme": "light",
+      "width": 1440,
+      "docWidth": 1440,
+      "scrollHeight": 1303,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "onboarding",
+      "theme": "light",
+      "width": 1440,
+      "docWidth": 1440,
+      "scrollHeight": 900,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "home",
+      "theme": "dark",
+      "width": 1440,
+      "docWidth": 1440,
+      "scrollHeight": 1599,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "wardrobe",
+      "theme": "dark",
+      "width": 1440,
+      "docWidth": 1440,
+      "scrollHeight": 900,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "wardrobe?mode=outfits",
+      "theme": "dark",
+      "width": 1440,
+      "docWidth": 1440,
+      "scrollHeight": 911,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "item/w001",
+      "theme": "dark",
+      "width": 1440,
+      "docWidth": 1440,
+      "scrollHeight": 1095,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "outfit/o1",
+      "theme": "dark",
+      "width": 1440,
+      "docWidth": 1440,
+      "scrollHeight": 1063,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "add",
+      "theme": "dark",
+      "width": 1440,
+      "docWidth": 1440,
+      "scrollHeight": 1350,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "add?mode=outfit",
+      "theme": "dark",
+      "width": 1440,
+      "docWidth": 1440,
+      "scrollHeight": 2048,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "ideas",
+      "theme": "dark",
+      "width": 1440,
+      "docWidth": 1440,
+      "scrollHeight": 1290,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "account",
+      "theme": "dark",
+      "width": 1440,
+      "docWidth": 1440,
+      "scrollHeight": 1742,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "stats",
+      "theme": "dark",
+      "width": 1440,
+      "docWidth": 1440,
+      "scrollHeight": 1303,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "onboarding",
+      "theme": "dark",
+      "width": 1440,
+      "docWidth": 1440,
+      "scrollHeight": 900,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin",
+      "theme": "light",
+      "width": 320,
+      "docWidth": 320,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/users",
+      "theme": "light",
+      "width": 320,
+      "docWidth": 320,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/smtp",
+      "theme": "light",
+      "width": 320,
+      "docWidth": 320,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/emails",
+      "theme": "light",
+      "width": 320,
+      "docWidth": 320,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/settings",
+      "theme": "light",
+      "width": 320,
+      "docWidth": 320,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin",
+      "theme": "dark",
+      "width": 320,
+      "docWidth": 320,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/users",
+      "theme": "dark",
+      "width": 320,
+      "docWidth": 320,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/smtp",
+      "theme": "dark",
+      "width": 320,
+      "docWidth": 320,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/emails",
+      "theme": "dark",
+      "width": 320,
+      "docWidth": 320,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/settings",
+      "theme": "dark",
+      "width": 320,
+      "docWidth": 320,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin",
+      "theme": "light",
+      "width": 390,
+      "docWidth": 390,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/users",
+      "theme": "light",
+      "width": 390,
+      "docWidth": 390,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/smtp",
+      "theme": "light",
+      "width": 390,
+      "docWidth": 390,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/emails",
+      "theme": "light",
+      "width": 390,
+      "docWidth": 390,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/settings",
+      "theme": "light",
+      "width": 390,
+      "docWidth": 390,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin",
+      "theme": "dark",
+      "width": 390,
+      "docWidth": 390,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/users",
+      "theme": "dark",
+      "width": 390,
+      "docWidth": 390,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/smtp",
+      "theme": "dark",
+      "width": 390,
+      "docWidth": 390,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/emails",
+      "theme": "dark",
+      "width": 390,
+      "docWidth": 390,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/settings",
+      "theme": "dark",
+      "width": 390,
+      "docWidth": 390,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin",
+      "theme": "light",
+      "width": 768,
+      "docWidth": 768,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/users",
+      "theme": "light",
+      "width": 768,
+      "docWidth": 768,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/smtp",
+      "theme": "light",
+      "width": 768,
+      "docWidth": 768,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/emails",
+      "theme": "light",
+      "width": 768,
+      "docWidth": 768,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/settings",
+      "theme": "light",
+      "width": 768,
+      "docWidth": 768,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin",
+      "theme": "dark",
+      "width": 768,
+      "docWidth": 768,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/users",
+      "theme": "dark",
+      "width": 768,
+      "docWidth": 768,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/smtp",
+      "theme": "dark",
+      "width": 768,
+      "docWidth": 768,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/emails",
+      "theme": "dark",
+      "width": 768,
+      "docWidth": 768,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/settings",
+      "theme": "dark",
+      "width": 768,
+      "docWidth": 768,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin",
+      "theme": "light",
+      "width": 1440,
+      "docWidth": 1440,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/users",
+      "theme": "light",
+      "width": 1440,
+      "docWidth": 1440,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/smtp",
+      "theme": "light",
+      "width": 1440,
+      "docWidth": 1440,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/emails",
+      "theme": "light",
+      "width": 1440,
+      "docWidth": 1440,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/settings",
+      "theme": "light",
+      "width": 1440,
+      "docWidth": 1440,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin",
+      "theme": "dark",
+      "width": 1440,
+      "docWidth": 1440,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/users",
+      "theme": "dark",
+      "width": 1440,
+      "docWidth": 1440,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/smtp",
+      "theme": "dark",
+      "width": 1440,
+      "docWidth": 1440,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/emails",
+      "theme": "dark",
+      "width": 1440,
+      "docWidth": 1440,
+      "empty": false,
+      "unlabelled": []
+    },
+    {
+      "route": "admin/settings",
+      "theme": "dark",
+      "width": 1440,
+      "docWidth": 1440,
+      "empty": false,
+      "unlabelled": []
+    }
+  ],
+  "flows": [
+    {
+      "name": "item create and edit through buttons",
+      "pass": true
+    },
+    {
+      "name": "wardrobe search survives item and Back",
+      "pass": true
+    },
+    {
+      "name": "confirm modal traps and restores keyboard focus",
+      "pass": true
+    },
+    {
+      "name": "recommendation sheet save and keyboard focus",
+      "pass": true
+    },
+    {
+      "name": "outfit Edit opens full builder and updates existing outfit",
+      "pass": false,
+      "error": ""
+    },
+    {
+      "name": "corrupt image rejected without broken preview",
+      "pass": false,
+      "error": ""
+    }
+  ],
+  "errors": [],
+  "summary": {
+    "route_checks": 128,
+    "overflow": 0,
+    "empty": 0,
+    "unlabelled": 0,
+    "flows_passed": 4,
+    "flows_total": 6,
+    "runtime_errors": 0
+  }
+}

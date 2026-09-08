@@ -1,0 +1,282 @@
+{
+  "layouts": [
+    {
+      "width": 320,
+      "theme": "light",
+      "screen": "clothes",
+      "issues": []
+    },
+    {
+      "width": 320,
+      "theme": "light",
+      "screen": "category",
+      "issues": []
+    },
+    {
+      "width": 320,
+      "theme": "light",
+      "screen": "outfits",
+      "issues": []
+    },
+    {
+      "width": 320,
+      "theme": "light",
+      "screen": "detail",
+      "issues": []
+    },
+    {
+      "width": 320,
+      "theme": "light",
+      "screen": "builder",
+      "issues": []
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "screen": "clothes",
+      "issues": []
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "screen": "category",
+      "issues": []
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "screen": "outfits",
+      "issues": []
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "screen": "detail",
+      "issues": []
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "screen": "builder",
+      "issues": []
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "screen": "clothes",
+      "issues": []
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "screen": "category",
+      "issues": []
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "screen": "outfits",
+      "issues": []
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "screen": "detail",
+      "issues": []
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "screen": "builder",
+      "issues": []
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "screen": "clothes",
+      "issues": []
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "screen": "category",
+      "issues": []
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "screen": "outfits",
+      "issues": []
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "screen": "detail",
+      "issues": []
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "screen": "builder",
+      "issues": []
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "screen": "clothes",
+      "issues": []
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "screen": "category",
+      "issues": []
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "screen": "outfits",
+      "issues": []
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "screen": "detail",
+      "issues": []
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "screen": "builder",
+      "issues": []
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "screen": "clothes",
+      "issues": []
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "screen": "category",
+      "issues": []
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "screen": "outfits",
+      "issues": []
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "screen": "detail",
+      "issues": []
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "screen": "builder",
+      "issues": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "screen": "clothes",
+      "issues": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "screen": "category",
+      "issues": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "screen": "outfits",
+      "issues": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "screen": "detail",
+      "issues": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "screen": "builder",
+      "issues": []
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "screen": "clothes",
+      "issues": []
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "screen": "category",
+      "issues": []
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "screen": "outfits",
+      "issues": []
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "screen": "detail",
+      "issues": []
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "screen": "builder",
+      "issues": []
+    }
+  ],
+  "flows": [
+    {
+      "name": "category keyboard activation retains visible selected control focus",
+      "pass": true
+    },
+    {
+      "name": "mode keyboard activation preserves focus and natural next tab",
+      "pass": true
+    },
+    {
+      "name": "favourite keyboard toggle persists through detail and reload",
+      "pass": true
+    },
+    {
+      "name": "empty search announces results and clear restores input focus",
+      "pass": true
+    },
+    {
+      "name": "full outfit edit keep/discard/save protects data and ID",
+      "pass": true
+    },
+    {
+      "name": "missing outfit has recovery and no dead favourite",
+      "pass": true
+    },
+    {
+      "name": "long outfit content wraps and final cards remain reachable",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "summary": {
+    "layout_checks": 40,
+    "layout_issues": 0,
+    "flows_passed": 7,
+    "flows_total": 7,
+    "runtime_errors": 0
+  }
+}

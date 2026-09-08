@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>Aura Fit — icon audit</title>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<style>
+  body{padding:20px;font-family:var(--font)}
+  h2{font-size:15px;margin:0 0 14px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-2)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:10px}
+  .cell{
+    background:var(--surface);border:1px solid var(--border);border-radius:12px;
+    padding:12px 6px;text-align:center;
+  }
+  /* the exact box the app uses, so clipping shows up */
+  .box{width:48px;height:48px;margin:0 auto 8px;position:relative;
+       outline:1px dashed var(--border-2);outline-offset:0}
+  .box svg{width:48px;height:48px;fill:none;stroke:currentColor;stroke-width:1.7;
+           stroke-linecap:round;stroke-linejoin:round;color:var(--accent)}
+  .nm{font-size:10px;color:var(--text-2);word-break:break-all}
+  .filled svg{fill:currentColor;stroke:none}
+</style>
+</head>
+<body>
+<h2>Stroke — 48px box, dashed outline shows the viewport</h2>
+<div class="grid" id="stroke"></div>
+<h2 style="margin-top:28px">Filled (.ico--fill)</h2>
+<div class="grid" id="filled"></div>
+
+<script src="js/sprite.js"></script>
+<script>
+  var ids = [].slice.call(document.querySelectorAll('#aura-sprite g[id]')).map(function (g) { return g.id; });
+  function render(host, filled) {
+    document.getElementById(host).innerHTML = ids.map(function (id) {
+      return '<div class="cell' + (filled ? ' filled' : '') + '">' +
+        '<div class="box"><svg viewBox="0 0 24 24"><use href="#' + id + '"/></svg></div>' +
+        '<div class="nm">' + id + '</div></div>';
+    }).join('');
+  }
+  render('stroke', false);
+  render('filled', true);
+  document.title = 'Icon audit — ' + ids.length + ' icons';
+</script>
+</body>
+</html>

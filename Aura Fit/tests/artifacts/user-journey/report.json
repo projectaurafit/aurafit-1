@@ -1,0 +1,52 @@
+[
+  {
+    "entry": "index.html",
+    "flow": "signup through all four preference steps",
+    "pass": true
+  },
+  {
+    "entry": "index.html",
+    "flow": "home calendar planning, shuffle and search",
+    "pass": true
+  },
+  {
+    "entry": "index.html",
+    "flow": "valid photo upload, pair suggestions and item deletion",
+    "pass": true
+  },
+  {
+    "entry": "index.html",
+    "flow": "idea categories, regeneration and stylist save",
+    "pass": true
+  },
+  {
+    "entry": "index.html",
+    "flow": "profile edit, three themes, privacy, stats, library reset, sign-out and returning sign-in",
+    "pass": true
+  },
+  {
+    "entry": "preview.html",
+    "flow": "signup through all four preference steps",
+    "pass": true
+  },
+  {
+    "entry": "preview.html",
+    "flow": "home calendar planning, shuffle and search",
+    "pass": true
+  },
+  {
+    "entry": "preview.html",
+    "flow": "valid photo upload, pair suggestions and item deletion",
+    "pass": true
+  },
+  {
+    "entry": "preview.html",
+    "flow": "idea categories, regeneration and stylist save",
+    "pass": true
+  },
+  {
+    "entry": "preview.html",
+    "flow": "profile edit, three themes, privacy, stats, library reset, sign-out and returning sign-in",
+    "pass": true
+  }
+]

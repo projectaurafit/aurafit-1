@@ -1,0 +1,355 @@
+/* ==========================================================
+   AURA FIT - ADMIN PANEL
+   Dashboard · Users · SMTP · Email templates · Settings.
+   Every class is prefixed .adm- ; colours come from tokens.css
+   only, so light and dark both work without overrides.
+   ========================================================== */
+
+/* ---------------- section nav ---------------- */
+.adm-nav{margin-top:var(--s3)}
+.adm-topbadge{height:26px}
+
+/* ---------------- page intro ---------------- */
+.adm-intro{padding:var(--s5) 0 0}
+.adm-intro__t{font-size:var(--fs-display);font-weight:800;letter-spacing:-.03em;line-height:var(--lh-tight)}
+.adm-intro__s{font-size:var(--fs-sm);color:var(--text-2);margin-top:4px}
+
+/* ---------------- stat tiles ---------------- */
+.adm-stats{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3);margin-top:var(--s5)}
+
+/* ---------------- two-column blocks ---------------- */
+.adm-two,.adm-cols,.adm-split{display:block}
+.adm-cols__main,.adm-cols__side,.adm-split__list,.adm-split__main{min-width:0}
+
+/* ---------------- key / value rows ---------------- */
+.adm-kv__row{
+  display:flex;align-items:center;justify-content:space-between;gap:var(--s3);
+  min-height:48px;padding:var(--s2) 0;
+  border-bottom:1px solid var(--divider);
+}
+.adm-kv__row:last-child{border-bottom:0}
+.adm-kv__k{
+  display:inline-flex;align-items:center;gap:var(--s2);
+  font-size:var(--fs-sm);font-weight:600;color:var(--text-2);flex:none;
+}
+.adm-kv__k .ico{color:var(--text-3)}
+.adm-kv__v{display:inline-flex;align-items:center;gap:var(--s1);min-width:0;text-align:right;justify-content:flex-end}
+.adm-kv--tight .adm-kv__row{min-height:40px;padding:var(--s1) 0}
+.adm-kv__row:has(+ .adm-kv__bar){border-bottom:0;padding-bottom:var(--s1)}
+.adm-kv__bar{margin-bottom:var(--s3)}
+.adm-kv__bar + .adm-kv__row{border-top:1px solid var(--divider)}
+
+/* ---------------- activity feed ---------------- */
+.adm-feed__row{display:flex;align-items:flex-start;gap:var(--s3);padding:var(--s3) var(--s4)}
+.adm-feed__row + .adm-feed__row{border-top:1px solid var(--divider)}
+.adm-feed__ico{
+  width:34px;height:34px;border-radius:var(--r-sm);flex:none;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--surface-tint);color:var(--accent-2);
+}
+.adm-feed__ico .ico{width:17px;height:17px}
+.adm-feed__t{display:block;font-size:var(--fs-sm);font-weight:600;line-height:var(--lh-snug)}
+.adm-feed__s{display:block;font-size:var(--fs-xs);color:var(--text-2);margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.adm-feed__time{font-size:var(--fs-xxs);font-weight:600;color:var(--text-3);flex:none;white-space:nowrap;padding-top:3px}
+
+/* ---------------- quick actions ---------------- */
+.adm-quick{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3)}
+.adm-quick .actbtn{color:var(--text)}
+.adm-quick .actbtn .ico{color:var(--accent-2)}
+
+/* ---------------- badges / pills ---------------- */
+.adm-badge--danger{background:var(--danger-soft);color:var(--danger)}
+
+.adm-pill{
+  display:inline-flex;align-items:center;gap:6px;
+  height:26px;padding:0 10px 0 9px;border-radius:var(--r-full);
+  font-size:var(--fs-xxs);font-weight:700;letter-spacing:.01em;white-space:nowrap;
+  background:var(--surface-2);color:var(--text-2);
+}
+.adm-pill i{width:7px;height:7px;border-radius:99px;background:currentColor;display:block;flex:none}
+.adm-pill--ok{background:var(--success-soft);color:var(--success)}
+.adm-pill--bad{background:var(--danger-soft);color:var(--danger)}
+.adm-pill--info{background:var(--accent-soft);color:var(--accent-2)}
+.adm-pill--warn{background:var(--surface-tint);color:var(--accent-2)}
+.adm-pill--warn i{animation:blink 1.2s infinite both}
+
+/* ---------------- avatar ---------------- */
+.adm-av{
+  width:36px;height:36px;border-radius:50%;flex:none;
+  display:inline-flex;align-items:center;justify-content:center;
+  background:linear-gradient(140deg,var(--accent),var(--accent-2));
+  color:var(--on-accent);font-size:var(--fs-xs);font-weight:800;letter-spacing:.02em;
+}
+.adm-av--lg{width:52px;height:52px;font-size:var(--fs-h3)}
+
+/* ---------------- users: toolbar ---------------- */
+.adm-toolbar{display:flex;flex-direction:column;gap:var(--s3);margin-top:var(--s5)}
+.adm-toolbar__search{width:100%}
+.adm-toolbar .chip [data-count]{color:inherit;opacity:.6;font-weight:600}
+.adm-count{margin:var(--s3) 0 var(--s2);min-height:18px}
+
+/* ---------------- users: table ---------------- */
+.adm-tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+.adm-table{width:100%;border-collapse:collapse;min-width:860px}
+.adm-table th{
+  text-align:left;font-size:var(--fs-xxs);font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--text-3);padding:var(--s3);white-space:nowrap;
+  border-bottom:1px solid var(--border);background:var(--surface-2);
+}
+.adm-table th:first-child,.adm-table td:first-child{padding-left:var(--s4)}
+.adm-table th:last-child,.adm-table td:last-child{padding-right:var(--s4)}
+.adm-table td{
+  padding:var(--s3);vertical-align:middle;white-space:nowrap;
+  border-bottom:1px solid var(--divider);font-size:var(--fs-sm);
+}
+.adm-table tbody tr{transition:background-color var(--t-fast)}
+.adm-table tbody tr:hover{background:var(--surface-2)}
+.adm-table tbody tr:last-child td{border-bottom:0}
+.adm-td-email__v{display:block;max-width:200px}
+.adm-td-acts{text-align:right;width:1%}
+.adm-td-acts .btn,.adm-td-acts .iconbtn{vertical-align:middle}
+.adm-td-acts .iconbtn{width:34px;height:34px;margin-left:var(--s2)}
+.adm-rowbtn{height:34px;padding:0 12px}
+
+.adm-user{display:flex;align-items:center;gap:var(--s3);min-width:0;max-width:240px}
+.adm-user__n{display:block;font-size:var(--fs-sm);font-weight:600;line-height:var(--lh-snug)}
+.adm-user__e{display:block;font-size:var(--fs-xs);color:var(--text-2);margin-top:1px}
+
+/* ---------------- floating action menu ---------------- */
+.adm-menu{
+  position:fixed;z-index:var(--z-modal);
+  min-width:224px;padding:var(--s1);
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--r-sm);box-shadow:var(--sh-pop);
+  opacity:0;transform:scale(.96) translateY(-4px);transform-origin:top right;
+  transition:opacity var(--t-fast),transform var(--t-fast) var(--ease-spring);
+}
+.adm-menu.is-open{opacity:1;transform:none}
+.adm-menu__item{
+  display:flex;align-items:center;gap:var(--s3);width:100%;
+  height:40px;padding:0 var(--s3);border-radius:var(--r-xs);
+  font-size:var(--fs-sm);font-weight:600;color:var(--text);text-align:left;
+  transition:background-color var(--t-fast);
+}
+.adm-menu__item:hover{background:var(--surface-2)}
+.adm-menu__item .ico{width:17px;height:17px;color:var(--text-2)}
+.adm-menu__item.is-danger,.adm-menu__item.is-danger .ico{color:var(--danger)}
+.adm-menu__item.is-danger:hover{background:var(--danger-soft)}
+.adm-menu__item.is-disabled{opacity:.45;cursor:not-allowed}
+.adm-menu__item.is-disabled:hover{background:transparent}
+
+/* ---------------- user detail modal ---------------- */
+.adm-modal{max-width:460px;padding:var(--s5)}
+.adm-modal__head{display:flex;align-items:center;gap:var(--s3);margin-bottom:var(--s3)}
+.adm-modal__n{font-size:var(--fs-h2);font-weight:700;letter-spacing:-.015em}
+.adm-modal__e{font-size:var(--fs-xs);color:var(--text-2);margin-top:1px}
+.adm-modal__acts{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s4)}
+.adm-modal__acts .btn{flex:1 1 auto}
+
+/* ---------------- forms ---------------- */
+.adm-form2{display:grid;grid-template-columns:1fr;column-gap:var(--s4)}
+.adm-span2{grid-column:1 / -1}
+.adm-hint{font-size:var(--fs-xs);color:var(--text-3);margin-top:6px}
+.adm-actions{display:flex;justify-content:flex-end;align-items:center;gap:var(--s3);flex-wrap:wrap;margin-top:var(--s2)}
+.adm-actions .btn .spinner{width:16px;height:16px}
+
+.adm-presets{
+  display:flex;flex-direction:column;gap:var(--s2);
+  margin-bottom:var(--s4);padding-bottom:var(--s4);border-bottom:1px solid var(--divider);
+}
+.adm-presets__l{
+  display:inline-flex;align-items:center;gap:6px;flex:none;
+  font-size:var(--fs-xxs);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-2);
+}
+.adm-presets__l .ico{color:var(--accent-2)}
+.adm-presets .chips{min-width:0}
+
+/* ---------------- notes ---------------- */
+.adm-note{
+  display:flex;align-items:flex-start;gap:var(--s3);
+  padding:var(--s4);border-radius:var(--r-md);background:var(--surface-tint);
+}
+.adm-note__ico{
+  width:34px;height:34px;border-radius:var(--r-sm);flex:none;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--surface);color:var(--accent-2);
+}
+.adm-note__t{font-size:var(--fs-sm);font-weight:700}
+.adm-note__s{font-size:var(--fs-xs);color:var(--text-2);line-height:1.5;margin-top:3px}
+.adm-note__s em{font-style:normal;font-weight:600;color:var(--text)}
+
+/* ---------------- smtp test log ---------------- */
+.adm-log{
+  margin-top:var(--s3);padding:var(--s3);max-height:170px;overflow:auto;
+  border-radius:var(--r-sm);background:var(--surface-2);border:1px solid var(--border);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:var(--fs-xxs);line-height:1.6;color:var(--text-2);
+}
+.adm-log[hidden]{display:none}
+.adm-log__line{padding:1px 0;animation:fadeIn var(--t-fast) both;word-break:break-word}
+.adm-log__line.is-ok{color:var(--success);font-weight:600}
+.adm-log__line.is-bad{color:var(--danger);font-weight:600}
+
+/* ---------------- email templates ---------------- */
+.adm-tpl.is-active{background:var(--surface-tint)}
+.adm-tpl.is-active .listrow__ico{background:var(--accent);color:var(--on-accent)}
+.adm-tpl__t{display:flex;align-items:center;gap:var(--s2)}
+.adm-tpl__mod{height:20px;padding:0 8px;font-size:var(--fs-xxs)}
+
+.adm-textarea{min-height:260px;font-size:var(--fs-sm);line-height:1.6}
+
+.adm-vars{margin:0 0 var(--s4)}
+.adm-vars__l{display:flex;align-items:center;gap:6px;font-size:var(--fs-xs);font-weight:600;color:var(--text-2);margin-bottom:var(--s2)}
+.adm-vars__list{display:flex;flex-wrap:wrap;gap:var(--s2)}
+.adm-var{
+  height:30px;padding:0 10px;border-radius:var(--r-xs);
+  display:inline-flex;align-items:center;
+  background:var(--surface-2);border:1px solid var(--border);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:var(--fs-xs);color:var(--accent-2);
+  transition:border-color var(--t-fast),background-color var(--t-fast),transform var(--t-fast);
+}
+.adm-var:hover{border-color:var(--accent);background:var(--accent-soft);transform:translateY(-1px)}
+
+.adm-preview{overflow:hidden}
+.adm-preview__head{padding:var(--s4);background:var(--surface-2);border-bottom:1px solid var(--divider)}
+.adm-preview__meta{display:flex;align-items:center;gap:var(--s3);font-size:var(--fs-xs);color:var(--text-2);min-width:0}
+.adm-preview__meta + .adm-preview__meta{margin-top:3px}
+.adm-preview__meta span:first-child{width:40px;flex:none;font-weight:600;color:var(--text-3)}
+.adm-preview__subject{font-size:var(--fs-h3);font-weight:700;margin-top:var(--s3);line-height:var(--lh-snug)}
+.adm-preview__body{
+  padding:var(--s4);font-size:var(--fs-sm);line-height:1.65;
+  white-space:pre-wrap;word-break:break-word;
+}
+.adm-var-hit{background:var(--accent-soft);color:var(--text);border-radius:4px;padding:0 3px}
+.adm-var-miss{background:var(--danger-soft);color:var(--danger);border-radius:4px;padding:0 3px;font-weight:600}
+
+/* ---------------- settings ---------------- */
+.adm-toggle{display:flex;align-items:center;gap:var(--s3);padding:var(--s4)}
+.adm-toggle + .adm-toggle{border-top:1px solid var(--divider)}
+.adm-toggle__t{display:block;font-size:var(--fs-h3);font-weight:600;line-height:var(--lh-snug)}
+.adm-toggle__s{display:block;font-size:var(--fs-xs);color:var(--text-2);margin-top:2px;line-height:1.45}
+
+.adm-danger{border-color:var(--danger-soft);border-color:color-mix(in srgb,var(--danger) 32%,var(--border))}
+.adm-danger__title{display:flex;align-items:center;gap:var(--s2);color:var(--danger)}
+.adm-danger__title .ico{width:18px;height:18px}
+.adm-danger__row{display:flex;align-items:center;gap:var(--s4);padding:var(--s4)}
+.adm-danger__row + .adm-danger__row{border-top:1px solid var(--divider)}
+.adm-danger__row .btn{flex:none}
+.adm-danger__t{display:block;font-size:var(--fs-h3);font-weight:600;line-height:var(--lh-snug)}
+.adm-danger__s{display:block;font-size:var(--fs-xs);color:var(--text-2);margin-top:2px;line-height:1.45}
+
+/* ==========================================================
+   NARROW  < 520px  - stack buttons full width
+   ========================================================== */
+@media (max-width:519px){
+  .adm-actions{flex-direction:column-reverse;align-items:stretch}
+  .adm-actions .btn{width:100%}
+  .adm-danger__row{flex-wrap:wrap}
+  .adm-danger__row .grow{flex-basis:100%}
+  .adm-danger__row .btn{width:100%}
+  .adm-modal__acts .btn{flex-basis:calc(50% - var(--s1))}
+}
+
+/* ==========================================================
+   MOBILE  < 720px  - the user table collapses into cards
+   ========================================================== */
+@media (max-width:719px){
+  .adm-table{min-width:0}
+  .adm-table,.adm-table tbody,.adm-table tr,.adm-table td{display:block;white-space:normal}
+  .adm-table thead{display:none}
+  .adm-table tbody tr{
+    background:var(--surface);border:1px solid var(--border);
+    border-radius:var(--r-md);box-shadow:var(--sh-card);
+    padding:var(--s3) var(--s4);margin-bottom:var(--s3);
+  }
+  .adm-table tbody tr:hover{background:var(--surface)}
+  .adm-table tbody tr:last-child{margin-bottom:0}
+  .adm-table td{
+    display:flex;align-items:center;justify-content:space-between;gap:var(--s3);
+    padding:var(--s2) 0;border-bottom:1px solid var(--divider);
+  }
+  .adm-table tbody tr:last-child td{border-bottom:1px solid var(--divider)}
+  .adm-table td[data-label]::before{
+    content:attr(data-label);flex:none;
+    font-size:var(--fs-xs);font-weight:600;color:var(--text-3);
+  }
+  .adm-table td.adm-td-user{padding:var(--s1) 0 var(--s3)}
+  .adm-table td.adm-td-email{display:none}
+  .adm-table td.adm-td-acts,.adm-table tbody tr:last-child td.adm-td-acts{
+    width:auto;border-bottom:0;padding:var(--s3) 0 var(--s1);justify-content:flex-end;gap:var(--s2);
+  }
+  .adm-td-acts .iconbtn{margin-left:0}
+  .adm-user{width:100%}
+}
+
+/* ==========================================================
+   TABLET  >= 720px
+   ========================================================== */
+@media (min-width:720px){
+  .adm-stats{grid-template-columns:repeat(4,1fr);gap:var(--s4)}
+  .adm-quick{grid-template-columns:repeat(4,1fr)}
+  .adm-form2{grid-template-columns:1fr 1fr}
+  .adm-presets{flex-direction:row;align-items:center;gap:var(--s3)}
+  .adm-toolbar{flex-direction:row;align-items:center}
+  .adm-toolbar__search{flex:1;min-width:0}
+  .adm-toolbar .chips{flex:none}
+  .adm-tablewrap{
+    background:var(--surface);border:1px solid var(--border);
+    border-radius:var(--r-md);box-shadow:var(--sh-card);
+  }
+  .adm-user__e{display:none}
+}
+
+/* ==========================================================
+   DESKTOP  >= 1024px  - multi-column layouts
+   ========================================================== */
+@media (min-width:1024px){
+  .adm-nav{margin-top:var(--s4)}
+  .adm-two{display:grid;grid-template-columns:1fr 1fr;gap:0 var(--s6);align-items:start}
+  .adm-cols{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:0 var(--s6);align-items:start}
+  .adm-split{display:grid;grid-template-columns:300px minmax(0,1fr);gap:0 var(--s6);align-items:start}
+  .adm-split__list{position:sticky;top:calc(var(--topbar-h) + var(--s4))}
+  .adm-split__main > .sec:first-child{margin-top:var(--s6)}
+}
+
+@media (min-width:1400px){
+  .adm-split{grid-template-columns:320px minmax(0,1fr)}
+  .adm-cols{grid-template-columns:minmax(0,1fr) 380px}
+}
+
+/* ==========================================================
+   ADMIN CONSOLE SHELL (admin.html)
+   The console has five sections, one more than the user app,
+   so its tab bar needs its own column count.
+   ========================================================== */
+.adm-tabbar{grid-template-columns:repeat(5,1fr)}
+.adm-tabbar .tabbar__btn{font-size:11px;gap:3px}
+.adm-tabbar .tabbar__btn .ico{width:20px;height:20px}
+
+/* the console has no floating "+" */
+.adm-app .fab{display:none}
+
+/* Console controls remain usable on touch devices and narrow laptops. */
+.adm-td-acts .iconbtn{width:44px;height:44px}
+.adm-rowbtn,.adm-menu__item,.adm-var{height:auto;min-height:44px}
+.adm-pill--info,.adm-pill--warn,.adm-var{color:var(--accent-text)}
+.adm-kv__v,.adm-modal__e,.adm-user__n,.adm-note__s,.adm-feed__t,.adm-intro__s{overflow-wrap:anywhere}
+.adm-two > *,.adm-stats > *{min-width:0}
+.adm-menu{max-width:calc(100vw - 24px);max-height:calc(100dvh - 24px);overflow-y:auto}
+@media (min-width:1024px) and (max-width:1279px){
+  .adm-cols{grid-template-columns:minmax(0,1fr)}
+  .adm-split{grid-template-columns:220px minmax(0,1fr);gap:var(--s4)}
+  .adm-toolbar{flex-wrap:wrap}
+  .adm-toolbar__search{flex-basis:100%}
+}
+@media (max-width:479px){
+  .adm-kv__row{flex-wrap:wrap}
+  .adm-kv__v{max-width:100%;margin-left:auto}
+  .adm-modal__acts .btn{flex-basis:100%}
+}
+
+/* section chips duplicate the sidebar on desktop */
+@media (min-width:1024px){
+  .adm-app .adm-nav{display:none}
+}

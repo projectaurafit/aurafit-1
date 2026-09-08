@@ -1,0 +1,106 @@
+"""Additional user journeys on source and bundled builds, with isolated test data."""
+import base64, json, os
+from pathlib import Path
+from playwright.sync_api import sync_playwright
+BASE = os.environ.get('AURA_QA_URL','http://127.0.0.1:8124')
+OUT = Path(__file__).parent / 'artifacts/user-journey'
+OUT.mkdir(parents=True,exist_ok=True)
+results = []
+with sync_playwright() as pw:
+    cached = Path(os.environ.get('LOCALAPPDATA','')) / 'ms-playwright/chromium-1208/chrome-win64/chrome.exe'
+    browser = pw.chromium.launch(headless=True,executable_path=str(cached) if cached.exists() else None)
+    for entry in ['index.html','preview.html']:
+        ctx = browser.new_context(service_workers='block',reduced_motion='reduce',viewport={'width':390,'height':844})
+        ctx.route('https://fonts.googleapis.com/**',lambda route:route.abort())
+        page = ctx.new_page()
+        page.set_default_timeout(7000)
+        errors = []
+        page.on('pageerror',lambda e:errors.append(str(e)))
+        page.goto(BASE+'/'+entry+'#/signup',wait_until='domcontentloaded')
+        def route(path): page.evaluate('(h)=>Router.go(h)', '#/'+path)
+        def confirm():
+            page.locator('.modal-scrim.is-open [data-yes]').click()
+            page.wait_for_timeout(250)
+        def passed(name): results.append({'entry':entry,'flow':name,'pass':True})
+        for field,value in [('name','Journey User'),('email','journey@example.com'),('pass','Journey@123'),('pass2','Journey@123')]:
+            page.locator('#'+field).fill(value)
+        page.locator('.a-check').click()
+        page.locator('form button[type=submit]').click()
+        page.locator('[data-gender=female]').click()
+        page.locator('[data-gender-next]').click()
+        page.locator('[data-nav="#/onboarding"]').click()
+        assert page.locator('[data-next]').is_disabled()
+        page.locator('[data-val=Casual]').click()
+        page.locator('[data-next]').click()
+        for value in ['Black','Ivory','Denim blue']:
+            page.locator('[data-val="'+value+'"]').click()
+        page.locator('[data-next]').click()
+        page.locator('[data-val=Everyday]').click()
+        page.locator('[data-next]').click()
+        page.locator('[data-val=Regular]').click()
+        page.locator('[data-next]').click()
+        assert page.evaluate("Store.user().onboarded && Store.user().prefs.fit === 'Regular'")
+        passed('signup through all four preference steps')
+        day = page.locator('[data-day]').first.get_attribute('data-day')
+        page.locator('[data-day]').first.click()
+        page.locator('[data-shuffle]').click()
+        assert page.evaluate('(d)=>!!Store.state.planner[d]',day)
+        page.locator('[data-search]').fill('shirt')
+        page.locator('[data-search]').press('Enter')
+        assert 'q=shirt' in page.url
+        passed('home calendar planning, shuffle and search')
+        route('add')
+        page.locator('[data-file]').set_input_files({'name':'sample.png','mimeType':'image/png','buffer':base64.b64decode('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aX1kAAAAASUVORK5CYII=')})
+        page.wait_for_selector('.dropzone img')
+        page.locator('#f-name').fill('Photo Test Shirt')
+        page.locator('[data-form] button[type=submit]').click()
+        item_id = page.evaluate("Store.state.wardrobe.find(i=>i.name==='Photo Test Shirt').id")
+        assert page.evaluate('(id)=>Store.getItem(id).photo.startsWith("data:image/")',item_id)
+        page.locator('[data-pair]').click()
+        page.wait_for_selector('.sheet.is-open')
+        assert page.locator('.sheet .prodcard').count() > 0
+        page.keyboard.press('Escape')
+        page.wait_for_timeout(300)
+        page.locator('[data-remove]').click()
+        confirm()
+        assert page.evaluate('(id)=>Store.getItem(id) === null',item_id)
+        passed('valid photo upload, pair suggestions and item deletion')
+        route('ideas')
+        for button in page.locator('.tabs [data-tab]').all():
+            button.click()
+            assert page.locator('[data-grid]').inner_text().strip()
+        page.locator('[data-regen]').click()
+        page.locator('[data-ask]').fill('office outfit')
+        page.locator('[data-generate]').click()
+        page.locator('[data-try]').click()
+        assert '#/outfit/' in page.url
+        passed('idea categories, regeneration and stylist save')
+        route('account')
+        page.locator('[data-editprofile]').click()
+        page.locator('.modal-scrim.is-open input').fill('Updated Journey')
+        confirm()
+        assert page.evaluate('Store.user().name') == 'Updated Journey'
+        for theme in ['dark','light','system']:
+            page.locator('[data-theme='+theme+']').click()
+            assert page.evaluate('Store.state.theme') == (None if theme=='system' else theme)
+        page.locator('[data-row=privacy]').click()
+        confirm()
+        page.locator('[data-go="#/stats"]:visible').click()
+        assert 'Wardrobe Usage' in page.locator('#root').inner_text()
+        route('account')
+        page.locator('[data-row=reset]').click()
+        confirm()
+        assert page.evaluate("Store.user().name === 'Updated Journey' && Store.user().gender === 'female'")
+        route('account')
+        page.locator('[data-logout]').click()
+        confirm()
+        page.locator('#email').fill('journey@example.com')
+        page.locator('#pass').fill('Journey@123')
+        page.locator('form button[type=submit]').click()
+        page.wait_for_selector('[data-ootd]')
+        passed('profile edit, three themes, privacy, stats, library reset, sign-out and returning sign-in')
+        assert not errors, errors
+        ctx.close()
+    browser.close()
+(OUT/'report.json').write_text(json.dumps(results,indent=2),encoding='utf-8')
+print(f'PASS: {len(results)} user journey groups; zero runtime errors')

@@ -1,0 +1,126 @@
+/* ================= RESET + BASE ================= */
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0;padding:0}
+html,body{height:100%}
+html{-webkit-text-size-adjust:100%}
+
+body{
+  font-family:var(--font);
+  font-size:var(--fs-body);
+  line-height:var(--lh-body);
+  color:var(--text);
+  background:var(--bg);
+  background-image:var(--bg-grad);
+  background-attachment:fixed;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overscroll-behavior-y:none;
+  transition:background-color var(--t-base) var(--ease-out), color var(--t-base) var(--ease-out);
+}
+
+img,svg,video{display:block;max-width:100%}
+button,input,select,textarea{font:inherit;color:inherit}
+button{background:none;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+button:disabled{cursor:not-allowed}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+
+h1,h2,h3,h4{line-height:var(--lh-tight);font-weight:700;letter-spacing:-.02em}
+
+::selection{background:var(--accent);color:var(--on-accent)}
+
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+:focus:not(:focus-visible){outline:none}
+
+.skip-link{position:fixed;left:var(--s4);top:var(--s4);z-index:10000;
+  padding:var(--s3) var(--s4);background:var(--primary);color:var(--on-primary);
+  border-radius:var(--r-sm);transform:translateY(-200%)}
+.skip-link:focus{transform:none}
+[data-view]:focus{outline:none}
+h1,h2,h3{scroll-margin-top:calc(var(--topbar-h) + var(--s4))}
+
+/* scrollbars */
+*{scrollbar-width:thin;scrollbar-color:var(--border-2) transparent}
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--border-2);border-radius:99px}
+::-webkit-scrollbar-thumb:hover{background:var(--text-3)}
+
+/* ================= ICON ================= */
+.ico{
+  width:20px;height:20px;flex:none;
+  fill:none;stroke:currentColor;stroke-width:1.7;
+  stroke-linecap:round;stroke-linejoin:round;
+}
+.ico--fill{fill:currentColor;stroke:none}
+.ico--sm{width:16px;height:16px}
+.ico--lg{width:24px;height:24px}
+.ico--xl{width:32px;height:32px;stroke-width:1.4}
+
+/* ================= UTILITIES ================= */
+.af-row{display:flex;align-items:center}
+.row-b{display:flex;align-items:center;justify-content:space-between}
+.af-col{display:flex;flex-direction:column}
+.gap1{gap:var(--s1)}.gap2{gap:var(--s2)}.gap3{gap:var(--s3)}.gap4{gap:var(--s4)}
+.grow{flex:1;min-width:0}
+.center{display:flex;align-items:center;justify-content:center}
+.hidden{display:none !important}
+[hidden]{display:none !important}
+.trunc{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.clamp2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+    clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+.t-dim{color:var(--text-2)}
+.t-faint{color:var(--text-3)}
+.t-accent{color:var(--accent-text)}
+.t-xs{font-size:var(--fs-xs)}
+.t-sm{font-size:var(--fs-sm)}
+.t-med{font-weight:600}
+.t-bold{font-weight:700}
+.t-right{text-align:right}
+.t-center{text-align:center}
+
+.scroll-x{
+  display:flex;overflow-x:auto;scroll-snap-type:x proximity;
+  -webkit-overflow-scrolling:touch;scrollbar-width:none;
+}
+.scroll-x::-webkit-scrollbar{display:none}
+
+/* section heading */
+.sec{margin-top:var(--s6)}
+.sec__head{display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--s3)}
+.sec__title{font-size:var(--fs-h2);font-weight:700;letter-spacing:-.015em}
+.sec__link{
+  display:inline-flex;align-items:center;gap:2px;min-height:44px;flex:none;
+  font-size:var(--fs-xs);font-weight:600;color:var(--text-2);
+  transition:color var(--t-fast);
+}
+.sec__link:hover{color:var(--accent-text)}
+.sec__link .ico{width:14px;height:14px}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes pop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.anim-in{animation:fadeUp var(--t-slow) var(--ease-out) both}
+.stagger>*{animation:fadeUp 460ms var(--ease-out) both}
+.stagger>*:nth-child(1){animation-delay:.02s}
+.stagger>*:nth-child(2){animation-delay:.06s}
+.stagger>*:nth-child(3){animation-delay:.10s}
+.stagger>*:nth-child(4){animation-delay:.14s}
+.stagger>*:nth-child(5){animation-delay:.18s}
+.stagger>*:nth-child(6){animation-delay:.22s}
+.stagger>*:nth-child(7){animation-delay:.26s}
+.stagger>*:nth-child(8){animation-delay:.30s}
+.stagger>*:nth-child(n+9){animation-delay:.34s}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;animation-delay:0ms !important;animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;scroll-behavior:auto !important;
+  }
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "document": "preview.html",
+    "width": 390,
+    "pass": true
+  },
+  {
+    "document": "preview.html",
+    "width": 1440,
+    "pass": true
+  },
+  {
+    "document": "admin-preview.html",
+    "width": 390,
+    "pass": true
+  },
+  {
+    "document": "admin-preview.html",
+    "width": 1440,
+    "pass": true
+  },
+  {
+    "offline": "user wardrobe with query string",
+    "pass": true
+  },
+  {
+    "offline": "admin console with query string",
+    "pass": true
+  }
+]
