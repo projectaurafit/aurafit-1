@@ -1,2 +1,2 @@
 # aurafit
-a digit clothing assistance and suggestions app
+a digital clothing assistance and suggestions app
